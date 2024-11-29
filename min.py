@@ -46,7 +46,35 @@ def display_matrix(matrix):
         print(" ".join(map(str, row)))
 
 def main():
-    pass
+    def main():
+    matrix = None
+    
+    while True:
+        print_menu()
+        choice = input("Выберите пункт меню: ")
+
+        if choice == '1':
+            matrix = input_matrix()
+        elif choice == '2':
+            size = int(input("Введите размер матрицы (n x n): "))
+            matrix = generate_random_matrix(size)
+        elif choice == '3':
+            if matrix is not None:
+                swap_rows_and_columns(matrix)
+                print("Алгоритм выполнен.")
+            else:
+                print("Сначала введите данные.")
+        elif choice == '4':
+            if matrix is not None:
+                display_matrix(matrix)
+            else:
+                print("Сначала введите данные.")
+        elif choice == '5':
+            print("Завершение работы программы.")
+            break
+        else:
+            print("Неверный выбор.")
 
 if __name__ == "__main__":
     main()
+    pass
