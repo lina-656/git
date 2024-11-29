@@ -1,7 +1,12 @@
 import random
 
 def print_menu():
-    pass
+    print("\nМеню:")
+    print("1. Ввод исходных данных вручную")
+    print("2. Генерация случайной матрицы")
+    print("3. Выполнение алгоритма")
+    print("4. Вывод результата")
+    print("5. Завершение работы программы")
 
 def input_matrix():
     n = int(input("Введите размер матрицы (n x n): "))
@@ -34,7 +39,6 @@ def swap_rows_and_columns(matrix):
     # Замена местами строки и столбца
     if min_row_index is not None and max_col_index is not None:
         for i in range(len(matrix)):
-            # Смена строки с минимальным элементом на соответствующий столбец
             matrix[min_row_index][i], matrix[i][max_col_index] = matrix[i][max_col_index], matrix[min_row_index][i]
 
 def display_matrix(matrix):
@@ -43,6 +47,6 @@ def display_matrix(matrix):
 
 def main():
     pass
+
 if __name__ == "__main__":
     main()
-jnj
